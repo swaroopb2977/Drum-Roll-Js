@@ -7,6 +7,15 @@ document.querySelector(".set").addEventListener("click",function () {
 
 */
 
+function animate(currentKey)
+{
+    var element=document.querySelector("."+currentKey);
+    element.classList.add("pressed");
+
+}
+
+
+
 // Method 2
 
 //  Detecting Button press 
@@ -20,6 +29,8 @@ for (var i=0;i<document.querySelectorAll(".drum").length;i++)
     function Sound()
     {
         var buttoninnerHtml=this.innerHTML;
+        var btnAni=this.innerHTML;
+        animate(btnAni);
 
         switch(buttoninnerHtml)
         {
@@ -77,6 +88,8 @@ for (var i=0;i<document.querySelectorAll(".drum").length;i++)
 document.addEventListener("keydown",function(event) {
 //alert(event.key+" key was pressed");
 var pressb=event.key;
+var btnAni=event.key;
+animate(btnAni);
 
 switch(pressb)
         {

@@ -12,6 +12,11 @@ function animate(currentKey)
     var element=document.querySelector("."+currentKey);
     element.classList.add("pressed");
 
+    setTimeout(function(){
+        element.classList.remove("pressed");
+
+    },100);
+
 }
 
 
